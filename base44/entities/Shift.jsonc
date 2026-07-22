@@ -1,0 +1,55 @@
+{
+  "name": "Shift",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "days_of_week": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "work_location_id": {
+      "type": "string"
+    },
+    "grace_period_minutes": {
+      "type": "number",
+      "default": 15
+    },
+    "rotation_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "rotation_cycle_days": {
+      "type": "number",
+      "default": 7
+    },
+    "color": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "start_time",
+    "end_time"
+  ],
+  "permissions": {
+    "allow_create": "admin",
+    "allow_update": "admin",
+    "allow_delete": "admin",
+    "allow_read": "auth"
+  }
+}

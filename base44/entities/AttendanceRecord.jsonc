@@ -1,0 +1,64 @@
+{
+  "name": "AttendanceRecord",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string"
+    },
+    "employee_name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "clock_in": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "clock_out": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "clock_in_latitude": {
+      "type": "number"
+    },
+    "clock_in_longitude": {
+      "type": "number"
+    },
+    "clock_out_latitude": {
+      "type": "number"
+    },
+    "clock_out_longitude": {
+      "type": "number"
+    },
+    "work_location_id": {
+      "type": "string"
+    },
+    "work_location_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "present",
+        "late",
+        "absent"
+      ],
+      "default": "present"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "employee_id",
+    "date"
+  ],
+  "permissions": {
+    "allow_create": "auth",
+    "allow_update": "auth",
+    "allow_delete": "admin",
+    "allow_read": "auth"
+  }
+}
